@@ -57,7 +57,7 @@
             <header>    <!-- Titulo de la seccion -->
                 <h3>Mis tecnologías favoritas</h3>
             </header>
-            <ol>    <!-- Enumeramos las opciones -->
+            <ol>    <!-- Enumeramos las opciones numerica o alfabeticamente -->
                 <li>HTML</li>
                 <li>JavaScript</li>
             </ol>
@@ -78,7 +78,91 @@
     </main>
 </body>
 
+<header>    <!-- Para contener algunos elementos de encabezado -->
+    <nav>
+        <a href="#experiencia">Experiencia</a>  <!-- <a> crea un enlace a otras páginas de internet, archivos o ubicaciones, etc -->
+        <a href="#proyectos">Proyectos</a>  <!-- href contiene una URL o fragmento de URL -->
+        <a href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a> <!-- target especifica donde se va a abrir la URL -->
+        <!-- rel indica la relacion del objeto destino con el objeto enlace. Con noferrer no se envian encabezados del sitio de origen -->
+    </nav>
+</header>
 
+<section>
+    <h2>Formulario de contacto</h2>
+    <form method="post" action="/"> <!-- action: la URL de una aplicacion que procesara la informacion enviada -->
+        <!-- method define el metodo HTTP que el navegador usa para enviar el formulario -->
+        <!-- post: los datos del formulario se incluyen en el cuerpo de peticion -->
+        <fieldset>
+            <legend>Información personal</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Julio">
+            <label for="em">email:</label>
+            <input type="email" id="em" placeholder="a@gmail.com">
+        </fieldset>
 
+        <fieldset>  <!-- Hacemos una celda donde insertar datis -->
+            <legend>Otros</legend>
+            <div>
+                <label for="why">¿Sobre qué quieres contactar?:</label>
+                <select name="why" id="why">    <!-- No se que hace esto -->
+                    <option value="1">Trabajo</option>  <!-- Opciones para elegir -->
+                    <option value="2">Consulta</option>
+                    <option value="3">Otros</option>
+                </select>
+            </div>
+            <div>
+                <label for="terms">¿Acepta los términos?</label>
+                <input type="checkbox" id="terms" name="terms" required>    <!-- Checkbox necesaria -->
+            </div>
 
+            <div>
+                <datalist id="lang">
+                    <option value="JavaScript"></option>
+                    <option value="Python"></option>
+                    <option value="C++"></option>
+                </datalist>
+                <label>Que lenguaje necesitas ayuda?</label>
+                <input list="lang" name="lang">
+            </div>
+        </fieldset>
+
+        <section>
+            <h2>Preguntas frecuentes</h2>
+            <details>
+                <summary>¿Cómo contacto?</summary>
+                <p>Enviando un correo a julio@gmail.com</p>
+            </details>
+            <details>
+                <summary>¿Cómo me llamo?</summary>
+                <p>Julio</p>
+            </details>
+        </section>     
+        <!-- Utilizar botones -->
+        <fieldset> 
+            <input type="submit" value="Enviar contacto">
+            <button type="submit">Enviar contacto</button>
+            <button>Borrar formulario</button>
+        </fieldset>
+        <!-- No se por que no funciona -->
+        <video 
+            src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4">
+        </video>
+        <audio
+            src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4">
+    </audio>
+    </form>
+    <!-- No sale nada -->
+    <dialog>
+        <h1>Se puede abrir un modal</h1>
+        <p>Es totalmente nativo</p>
+        <button>Cerrar</button>
+    </dialog>
+       <button>Ver más información</button>
+<!-- No sale nada -->
+    <script>
+        window.show.addEventListener('click',()=>{window.modal.showModal()});
+        window.cerrar.addEventListener('click',()=>{window.modal.close()})
+    </script>
+       
+</section>
 
