@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #F3F4F6;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+:root {
+    --color-primary: #47585A;
+    --color-secondary: #B30033;
+    --color-accent: #FFD700;
+    --bg-light: #FFFFFF;
+    --bg-dark: #333333;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.articulo {
+    padding: 1.5rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articulo:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    border-radius: 8px;
+}
+
+.navBar__nav-a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navBar__nav-a:hover {
+    color: var(--color-accent);
+}
+
+.navBar__button {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navBar__button:hover {
+    background-color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+.presentation {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.presentation_image-profile {
+    border: 2px solid var(--color-primary);
+    border-radius: 15px;
+    padding: 0.5rem;
+    max-width: 100%;
+}
+
+.presentation_description {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-top: 1rem;
+}
+
+.contact-section, .faq-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"], button[type="reset"] {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, button[type="reset"]:hover {
+    background-color: var(--color-secondary);
+}
+
+.details-summary {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+@media screen and (max-width: 424px) {
+    .navBar {
+        width: 100%;
+    }
+}
